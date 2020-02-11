@@ -31,12 +31,9 @@ html {
     }
 }
 
-.about, .services{
-height: 800px;
-background-color: $light;
-}
-
 .about{
+    background-color: $light;
+
     &-bgi{
     width: 19rem;
     height: 27rem;
@@ -46,11 +43,24 @@ background-color: $light;
     &-btn{
         border-radius: 0rem }
 }
+
 .services{
-    &-bgi{
-        background-image: url(../img/card.png);
-        overflow: hidden;
+background-color: $light;
+    &-block{
+        min-height: 300px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+}
+
+.services-bgi{
+    background-image: url(../img/card.png), 
+                        linear-gradient($primary);
+    background-position: center bottom;
+    background-size: cover;
+    justify-content: start;
 }
 
 .works{
