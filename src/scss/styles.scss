@@ -69,23 +69,85 @@ background-image: url(../img/bgi-works.png), linear-gradient($primary);
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
+overflow: hidden;
 
 }
 
 .team{
-    background-color: $light;
     height: 820px;
 }
 
-.map{
+.mapmap{
     background-image: url(../img/bgi-map.png), linear-gradient($primary);
     height: 900px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 0;
+    &-info{
+        position: relative;
+        width: 270px;
+        height: 90px;
+        background-color: rgba(255,255,255, .5);
+        transform: translateX(100%);
+
+        &:active, &:hover, &:focus{
+        transform: translateX(0%);
+        transition: .5s ease-in ;
+
+        }
+
+        // & p{
+        // }
+    }
+    &-icon{
+        position: absolute;
+        left: -90px;
+        bottom: 0;
+        background-color: $primary;
+        height: 90px;
+        width: 90px;
+    }
+
+    & input{
+        background-color: rgba(255,255,255, .5);
+    }
+}
+#map{
+    z-index: 1;
 }
 
 .footer{
     height: 180px;
     background-color: $primary;
+}
+
+.links a{
+    display: inline-block;
+    & i{
+        width: 34px;
+        height: 34px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.carousel-indicators{
+    bottom: -20%;
+}
+
+.carousel-item{
+    // height: 550px; 
+    overflow: hidden;}
+
+.carousel{
+    width: 720px;
+    max-width: 100%;
+    
+}
+
+.border-radiis{
+    border-radius: 50%;
 }

@@ -13,6 +13,7 @@
 
 .carousel {
   position: relative;
+  width: 720px;
 }
 
 .carousel.pointer-event {
@@ -109,13 +110,13 @@
   }
 }
 .carousel-control-prev {
-  left: 0;
+  left: -20%;
   @if $enable-gradients {
     background-image: linear-gradient(90deg, rgba($black, .25), rgba($black, .001));
   }
 }
 .carousel-control-next {
-  right: 0;
+  right: -20%;
   @if $enable-gradients {
     background-image: linear-gradient(270deg, rgba($black, .25), rgba($black, .001));
   }

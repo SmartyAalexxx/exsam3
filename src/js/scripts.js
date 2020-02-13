@@ -1,4 +1,15 @@
-(function() {
+(function($) {
     'use strict';
-    console.log('Hello!');
-})();
+    
+    $('.carousel').carousel({
+        
+    })
+
+    $('.slider').slick({
+        dots: true
+    })
+
+
+    
+    console.log('Complete!');
+})(jQuery);
