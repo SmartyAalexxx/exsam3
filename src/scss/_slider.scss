@@ -108,38 +108,15 @@
     right: 0%;
     top: 25%;
 }
-li button{display: none;}
 
-header, .news {
-    .slick-dots li{
-        list-style: none;
-        // display: inline-block;
-        width: 5px;
-        height: 5px;
-        padding: 5px 5px;
-        margin: 40px 0;
-        border: 1px solid white;
+.slide{
+    display: inline-block;
+    width: 350px;
+    background-color: #fff;
+    margin: 20px;
+    &-img{
         border-radius: 50%;
-        background-color: transparent;
+        border: 5px solid $light;
+        
     }
-    .slick-dots .slick-active{ background-color: #fff;  
-    }
-// .news .slick-dots{
-//    
-// }
- }
-.news {
-    .slick-dots{
-        position: absolute;
-            display: inline-block;
-            margin: 0;
-            padding: 0;
-            left: calc(50% - 100px);
-            bottom: -120px;
-        & li{
-            display: inline-block;
-            margin: 60px 20px;
-        }
-    }
-
 }

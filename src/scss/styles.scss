@@ -1,7 +1,7 @@
 @import 'bootstrap/bootstrap';
 @import 'variables';
 @import 'mixins';
-// @import 'slider';
+@import 'slider';
 
 * {
     box-sizing: border-box;
@@ -11,6 +11,7 @@ html {
     height: 100%;
     font-size: 20px;
     // font-family: '';
+    scroll-behavior: smooth;
 }
 
 // body {
@@ -80,6 +81,8 @@ overflow: hidden;
 .mapmap{
     background-image: url(../img/bgi-map.png), linear-gradient($primary);
     height: 900px;
+    width: 100%;
+    overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -90,17 +93,15 @@ overflow: hidden;
         height: 90px;
         background-color: rgba(255,255,255, .5);
         transform: translateX(100%);
+        transition: .5s ease-in ;
 
         &:active, &:hover, &:focus{
         transform: translateX(0%);
         transition: .5s ease-in ;
-
         }
-
-        // & p{
-        // }
+        // & p{ }
     }
-    &-icon{
+    &-icon , &-arrow{
         position: absolute;
         left: -90px;
         bottom: 0;
@@ -109,6 +110,19 @@ overflow: hidden;
         width: 90px;
     }
 
+    &-arrow{
+        bottom: 50px;
+        left: 80%;
+        opacity: .5;
+        transform: scale(.9);
+        transition: ease-in .5s;
+        &:active, &:hover, &:focus{
+            opacity: .6;
+            transform: scale(1);
+            transition: ease-in .5s;            
+        }
+    
+    }
     & input{
         background-color: rgba(255,255,255, .5);
     }
@@ -135,19 +149,15 @@ overflow: hidden;
 }
 
 .carousel-indicators{
-    bottom: -20%;
-}
+    bottom: -20%;}
 
 .carousel-item{
-    // height: 550px; 
     overflow: hidden;}
 
 .carousel{
     width: 720px;
-    max-width: 100%;
-    
+    max-width: 100%; 
 }
 
 .border-radiis{
-    border-radius: 50%;
-}
+    border-radius: 50%;}
