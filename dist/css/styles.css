@@ -6415,17 +6415,16 @@ a.text-dark:hover, a.text-dark:focus {
   right: 0%;
   top: 25%; }
 
-.slide {
+.team .slide {
   display: inline-block;
   width: 350px !important;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, transparent), color-stop(35%, #fff), to(#fff));
   background-image: -o-linear-gradient(top, transparent 35%, #fff 35%, #fff 100%);
   background-image: linear-gradient(to bottom, transparent 35%, #fff 35%, #fff 100%);
   margin: 20px; }
-  .slide-img {
+  .team .slide-img {
     width: 240px;
     height: 240px;
-    display: inline-block;
     border-radius: 50%;
     border: 5px solid #ebebeb;
     margin: 0 auto; }
@@ -6599,8 +6598,14 @@ html {
   overflow: hidden; }
 
 .carousel {
+  display: block;
   width: 720px;
-  max-width: 100%; }
+  height: 320px;
+  padding: 5px;
+  margin: 0 auto; }
+  .carousel img {
+    height: 100%;
+    display: inline-block; }
 
 .border-radiis {
   border-radius: 50%; }
