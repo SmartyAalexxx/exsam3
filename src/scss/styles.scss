@@ -74,8 +74,25 @@ overflow: hidden;
 
 }
 
+.link{
+    text-decoration: none;
+    display: inline-block;
+    & i{
+        width: 34px;
+        height: 34px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .team{
     height: 820px;
+    & .links{
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 .mapmap{
@@ -136,17 +153,8 @@ overflow: hidden;
     background-color: $primary;
 }
 
-.links a{
-    display: inline-block;
-    & i{
-        width: 34px;
-        height: 34px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
+
+
 
 .carousel-indicators{
     bottom: -20%;}

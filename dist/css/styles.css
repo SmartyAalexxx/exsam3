@@ -6417,12 +6417,18 @@ a.text-dark:hover, a.text-dark:focus {
 
 .slide {
   display: inline-block;
-  width: 350px;
-  background-color: #fff;
+  width: 350px !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, transparent), color-stop(35%, #fff), to(#fff));
+  background-image: -o-linear-gradient(top, transparent 35%, #fff 35%, #fff 100%);
+  background-image: linear-gradient(to bottom, transparent 35%, #fff 35%, #fff 100%);
   margin: 20px; }
   .slide-img {
+    width: 240px;
+    height: 240px;
+    display: inline-block;
     border-radius: 50%;
-    border: 5px solid #ebebeb; }
+    border: 5px solid #ebebeb;
+    margin: 0 auto; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -6492,8 +6498,31 @@ html {
   background-position: center;
   overflow: hidden; }
 
+.link {
+  text-decoration: none;
+  display: inline-block; }
+  .link i {
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
 .team {
   height: 820px; }
+  .team .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
 
 .mapmap {
   background-image: url(../img/bgi-map.png), -webkit-gradient(linear, left top, left bottom, from(#9f9acf));
@@ -6562,22 +6591,6 @@ html {
 .footer {
   height: 180px;
   background-color: #9f9acf; }
-
-.links a {
-  display: inline-block; }
-  .links a i {
-    width: 34px;
-    height: 34px;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
 
 .carousel-indicators {
   bottom: -20%; }
