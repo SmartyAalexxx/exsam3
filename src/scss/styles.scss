@@ -10,15 +10,8 @@
 html {
     height: 100%;
     font-size: 20px;
-    // font-family: '';
     scroll-behavior: smooth;
 }
-
-// body {
-//     min-height: 100%;
-//     // @include text($text-color, $text-font, 1.4rem, 500);
-// }
-
 
 
 .hero{
@@ -26,15 +19,19 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    height: 1060px;
+    height: 100vh;
     & h1{
         margin-top: 12rem;
+         @media screen and (max-width: 768px) {
+            margin-top: 3rem !important;
+            font-size: 60px;
+        }
     }
 }
 
 .about{
     background-color: $light;
-
+    
     &-bgi{
     width: 19rem;
     height: 27rem;
@@ -65,7 +62,6 @@ background-color: $light;
 }
 
 .works{
-height: 1000px;
 background-image: url(../img/bgi-works.png), linear-gradient($primary);
 background-size: cover;
 background-repeat: no-repeat;
@@ -75,7 +71,6 @@ overflow: hidden;
 }
 
 .link{
-    text-decoration: none;
     display: inline-block;
     & i{
         width: 34px;
@@ -85,10 +80,13 @@ overflow: hidden;
         justify-content: center;
         align-items: center;
     }
+    &:hover{
+        text-decoration: none;
+
+    }
 }
 
 .team{
-    height: 820px;
     & .links{
         display: flex;
         justify-content: space-around;
@@ -97,13 +95,14 @@ overflow: hidden;
 
 .mapmap{
     background-image: url(../img/bgi-map.png), linear-gradient($primary);
-    height: 900px;
+    // height: 900px;
     width: 100%;
     overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 0;
+    
     &-info{
         position: relative;
         width: 270px;
@@ -115,9 +114,15 @@ overflow: hidden;
         &:active, &:hover, &:focus{
         transform: translateX(0%);
         transition: .5s ease-in ;
+        
         }
-        // & p{ }
+        & a:hover{ 
+            text-decoration: none;
+            color: $primary !important;
+            transition: .2s ease-out;
+        }
     }
+
     &-icon , &-arrow{
         position: absolute;
         left: -90px;
@@ -142,6 +147,10 @@ overflow: hidden;
     }
     & input{
         background-color: rgba(255,255,255, .5);
+        max-width: 48% !important;
+        & + input{
+            margin-left: 4%;
+        }
     }
 }
 #map{
@@ -165,7 +174,7 @@ overflow: hidden;
 .carousel{
     display: block;
     width: 720px;
-    height: 320px;
+    min-height: 33%;
     padding: 5px;
     margin: 0 auto;
     & img{

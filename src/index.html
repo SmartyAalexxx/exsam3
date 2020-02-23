@@ -13,7 +13,7 @@
     <section class="about py-5">
         <div class="container mb-4">
             <div class="row ">
-                <div class="about-bgi col-md-4 d-flex flex-column  align-items-center text-monospace">
+                <div class="about-bgi col-md-4 d-flex flex-column  align-items-center text-monospace mx-auto">
                     <i class="fas fa-user-tie text-white h2 pb-3 pt-5"></i>
                     <p class="text-uppercase  text-white h4 py-3"> about ut</p>
                 </div>
@@ -68,8 +68,8 @@
             </div>            
         </div>
     </section>
-    <section class="works position-relative">
-        <div class="container-md mb-5">
+    <section class="works position-relative pb-3">
+        <div class="container-md mb-5 pb-5">
             <div class="text-uppercase text-white text-center text-monospace">
                 <i class="fas fa-pen-nib h2 my-4"></i>
                 <h2 class="mb-5">recent works</h2>
@@ -105,13 +105,11 @@
                 </a>
             </div>
         </div>
-        <div class="row">    
-            <div class="col-md-3 offset-md-5 px-auto position-absolute fixed-bottom my-5">
-                <a href="#" class=" btn btn-outline-light px-4 py-2 font-italic">View Gallery</a>
-            </div>
+        <div class="row d-flex justify-content-center">    
+            <a href="#" class=" btn btn-outline-light px-4 py-2 font-italic">View Gallery</a>
         </div>
     </section>
-    <section class="team bg-light">
+    <section class="team bg-light pb-4">
         <div class="container-md">
             <div class="h2 text-secondary text-uppercase text-center text-monospace ">
                 <i class="fas fa-street-view my-4"></i>
@@ -205,20 +203,20 @@
         </div>
         <div class="mapmap-info p3 px-4 py-3 d-flex align-items-center justify-content-center ml-auto mb-4">
             <i class="mapmap-icon text-white h2 m-0 d-flex align-items-center justify-content-around fas fa-mobile-alt"></i>
-            <p class="text-center h6 m-0 ">+6281235966914</p>
+            <a class="text-center h6 m-0 text-dark-grey" href="tel:+6281235966914">+6281235966914</a>
+            
         </div>
 
         <div class="container">
-            <form class="">
+            <form method="POST">
                 <div class="row p-2">
-                    <input type="text" class="h6 font-italic p-3 text-white offset-md-1 col-md-5 mr-3" placeholder="Your Name *">
-                    <input type="text" class="h6 font-italic p-3 text-white col-md-5 mr-3" placeholder="Your Email *">
+                    <input type="text" class="h6 font-italic p-3 text-white col-md-6 mr-0 d-inline-block" placeholder="Your Name *" type="text" required>
+                    <input type="text" class="h6 font-italic p-3 text-white col-md-6 mr-0 d-inline-block" placeholder="Your Email *" type="email" required>
                 </div>
-
                 <div class="row p-2">
                     <textarea name="text-comment" id="text" cols="30" rows="5" 
-                    placeholder="Your Message *" class=" h6 font-italic p-3 text-white col-md-10 offset-md-1 mr-0"
-                    style="background-color: rgba(255,255,255, .5);"></textarea>
+                    placeholder="Your Message *" class=" h6 font-italic p-3 text-white col-md-12 mr-0"
+                    style="background-color: rgba(255,255,255, .5);" required></textarea>
                 </div>
 
                 <div class="row my-5">

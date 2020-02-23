@@ -99,10 +99,11 @@
     display: none;
 }
 
+/// custom rules
+
 .header .slick-dots{
     position: absolute;
     display: inline-block;
-    // width: 100px;
     margin: 0;
     padding: 0;
     right: 0%;
@@ -113,13 +114,12 @@
     .slide{
     display: inline-block;
     width: 350px !important;
-    // background-color: #fff;
     background-image: linear-gradient(to bottom, transparent 35%, #fff 35%, #fff 100%);
     margin: 20px;
     &-img{
         width: 240px;
         height: 240px;
-        // display: inline-block;
+        object-fit: cover;  
         border-radius: 50%;
         border: 5px solid $light;  
         margin: 0 auto;      
