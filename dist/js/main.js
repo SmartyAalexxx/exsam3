@@ -7543,22 +7543,17 @@ return Popper;
 (function($) {
     'use strict';
     
-    let obj = {
-      arrows: false,
-      infinite: true,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,      
-      slidesToShow: 3,
-    }
+    let win = window;
     $('.carousel').carousel({
         
     })
 
-    $(window).resize(function() {
-      if ($(window).width() <= '1200'){
+    $(win).resize(function() {
+      if ($(win).width() <= '1200'){
+
          console.log("small <= 1200")
           return this;}
+
         else   {
          console.log("big >= 1200")
           
@@ -7566,11 +7561,30 @@ return Popper;
 
 });
     $('.slider').slick(
-      obj
-
-      );
-
-
-    
+      {
+        arrows: true,
+        infinite: true,
+        slidesToScroll: 1,
+        autoplaySpeed: 5000,      
+        slidesToShow: 3,
+        responsive: [
+        {
+          breakpoint: 1201,
+          settings: {
+            slidesToShow: 2,
+            infinite: true,
+            
+          }
+        },
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 1,
+           
+          }
+        },        
+        
+      ]}
+    );
     console.log('Complete!');
 })(jQuery);

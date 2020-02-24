@@ -13,7 +13,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 .hero{
     background-image: url(../img/bgi-hero.png), linear-gradient($primary);
     background-repeat: no-repeat;
@@ -30,8 +29,7 @@ html {
 }
 
 .about{
-    background-color: $light;
-    
+    background-color: $light;    
     &-bgi{
     width: 19rem;
     height: 27rem;
@@ -87,7 +85,7 @@ overflow: hidden;
 }
 
 .team{
-    & .links{
+    & .links {
         display: flex;
         justify-content: space-around;
     }
@@ -162,15 +160,10 @@ overflow: hidden;
     background-color: $primary;
 }
 
-
-
-
 .carousel-indicators{
     bottom: -20%;}
-
 .carousel-item{
     overflow: hidden;}
-
 .carousel{
     display: block;
     width: 720px;

@@ -1,6 +1,7 @@
 /* Slider */
 
 .slick-slider {
+    box-sizing: border-box;
     position: relative;
     display: block;
     box-sizing: border-box;
@@ -13,6 +14,7 @@
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+    
 }
 .slick-list {
     position: relative;
@@ -62,6 +64,11 @@
     }
 }
 .slick-slide {
+    padding: 0 20px;
+    @media screen and (max-width: 768px){
+        padding: 0 40px;
+    }
+    // margin: 0 10px;
     float: left;
     height: 100%;
     min-height: 1px;
@@ -112,10 +119,8 @@
 
 .team{
     .slide{
-    display: inline-block;
-    width: 350px !important;
+        
     background-image: linear-gradient(to bottom, transparent 35%, #fff 35%, #fff 100%);
-    margin: 20px;
     &-img{
         width: 240px;
         height: 240px;
@@ -123,5 +128,50 @@
         border-radius: 50%;
         border: 5px solid $light;  
         margin: 0 auto;      
+        }
     }
-}}
+    & .slick-prev, & .slick-next{
+        box-shadow: 0 0 -10px $primary;
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid grey;
+        z-index: 1;
+        border-radius: 50%;
+        background-image: url(../img/arrow.png) ;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all .25s ease-in;
+    }
+    & .slick-prev{
+        left: -3%;
+        @media screen and (max-width: 768px) {
+            left: 0;
+        }
+        transform: rotate(90deg);
+        transition: .3s ease-out;
+        &:hover{
+            transform: translateX(-5px) rotate(90deg);
+            border: 1px solid white;
+
+        }
+    }
+    & .slick-next{
+        @media screen and (max-width: 768px){
+            right: 0;
+        }
+        right: -3%;
+        transform: rotate(-90deg);
+        transition: .3s ease-out;
+        &:hover{
+            transform: translateX(5px) rotate(-90deg);
+            border: 1px solid white;
+
+        }
+    }
+    & button{
+        color: transparent;
+    background-color: transparent;} 
+}
