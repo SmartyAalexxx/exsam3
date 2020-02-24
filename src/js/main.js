@@ -1,15 +1,14 @@
 //= lib/jquery.js
 //= lib/slick.js
 //= lib/popper.js
-/// = lib/isotope.js
 
 //= bootstrap/util.js
-//= bootstrap/collapse.js
-//= bootstrap/dropdown.js
 //= bootstrap/carousel.js
 
-///= bootstrap/alert.js
+///= bootstrap/collapse.js
+///= bootstrap/dropdown.js
 ///= bootstrap/button.js
+///= bootstrap/alert.js
 ///= bootstrap/modal.js
 ///= bootstrap/popover.js
 ///= bootstrap/scrollspy.js
